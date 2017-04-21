@@ -8,6 +8,8 @@ OBJECTS	 		:= $(SOURCES:.c=.o)
 A_OBJECTS 		:= $(A_SOURCES:.s=.o)
 ALL_OBJECTS 	:= $(addprefix bin/, $(notdir $(A_OBJECTS))) $(addprefix bin/, $(notdir $(OBJECTS)))
 
+.SECONDARY:
+
 force:
 
 all: bin/hello_world.nes

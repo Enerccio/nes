@@ -1,5 +1,6 @@
 ; Startup code for cc65/ca65
 	.import _main
+	.import _frame
 	.export __STARTUP__:absolute=1
 
 ; Linker generated symbols
@@ -111,6 +112,7 @@ BlankName:		;blanks screen
 	rts
 
 nmi:
+	jsr _frame
 irq:
     rti
 
